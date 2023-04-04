@@ -70,10 +70,10 @@ android {
 
         }
     }
-    android.applicationVariants.all { variant ->
+    applicationVariants.all { variant ->
         variant.outputs.all {
         if (variant.buildType.name == "release") {
-                getPackageApplication().outputDirectory = new File(project.rootDir.absolutePath + "/release/${versionCode}")
+                variant.getPackageApplication().outputDirectory = new File(project.rootDir.absolutePath + "/release/${versionCode}")
                 outputFileName = rootProject.ext.android.appName + "_${versionCode}.apk"
             }
         }
