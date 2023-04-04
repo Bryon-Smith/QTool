@@ -71,11 +71,9 @@ android {
         }
     }
     android.applicationVariants.all { variant ->
+        variant.getPackageApplication().outputDirectory = new File(project.rootDir.absolutePath + File.separator + "output")
         variant.outputs.all {
-            if (variant.buildType.name == "release") {
-                    outputDirectory = new File(project.rootDir.absolutePath + "/release/${defaultConfig.versionName}")
                     outputFileName = "QTool_v${versionCode}.apk"
-            }
         }
     }
 }
