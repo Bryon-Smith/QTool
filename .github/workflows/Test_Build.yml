@@ -35,9 +35,9 @@ jobs:
           ./gradlew :QTool:assembleRelease --warning-mode all
         env:
           KEYSTORE_PATH: "../key.jks"
-          KEYSTORE_PASSWORD: "1234567890"
-          KEY_ALIAS: "Bryon"
-          KEY_PASSWORD: "12345678"
+          KEYSTORE_PASSWORD: ${{ secrets.SIGN_PASS }}
+          KEY_ALIAS: ${{ secrets.SIGN_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.ALIA_PASS }}
           
       - name: Create Release
         id: create_release
