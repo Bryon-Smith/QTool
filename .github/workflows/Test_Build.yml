@@ -1,5 +1,5 @@
 name: Test Build CI
-  
+
 on:
   workflow_dispatch:
   push:
@@ -38,5 +38,3 @@ jobs:
           KEYSTORE_PASSWORD: ${{ secrets.SIGN_PASS }}
           KEY_ALIAS: ${{ secrets.SIGN_ALIAS }}
           KEY_PASSWORD: ${{ secrets.ALIA_PASS }}
-
-     
