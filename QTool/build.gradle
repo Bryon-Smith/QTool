@@ -72,9 +72,7 @@ android {
     }
     android.applicationVariants.all { variant ->
         variant.outputs.all {
-       
                 outputFileName = rootProject.ext.android.appName + "_${versionCode}.apk"
-          
         }
     }
 }
