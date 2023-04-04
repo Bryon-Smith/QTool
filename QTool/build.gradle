@@ -70,7 +70,7 @@ android {
 
         }
     }
-    applicationVariants.all { variant ->
+    android.applicationVariants.all { variant ->
         variant.outputs.all {
         if (variant.buildType.name == "release") {
                 variant.getPackageApplication().outputDirectory = new File(project.rootDir.absolutePath + "/release/${versionCode}")
